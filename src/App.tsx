@@ -44,11 +44,9 @@ const Navbar = () => {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-                <img
-                    src="/fenland_logo.png"
-                    alt="Fenland Property Maintenance"
-                    className={`h-12 w-auto object-contain transition-all duration-300 ${isScrolled ? 'brightness-100' : 'brightness-0 invert'}`}
-                />
+                <div className={`font-serif text-xl font-semibold tracking-tight ${isScrolled ? 'text-neutral-900' : 'text-white'}`}>
+                    Fenland Property Maintenance.
+                </div>
 
                 <div className="hidden md:flex items-center space-x-7">
                     {['#services', '#service-area', '#gallery', '#reviews', '#contact'].map((href, i) => {
