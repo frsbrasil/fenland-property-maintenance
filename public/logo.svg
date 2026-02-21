@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 210" width="520" height="210">
+  <!-- Forest green upper section -->
+  <rect x="0" y="0" width="520" height="148" fill="#3d5940"/>
+  <!-- Dark navy lower section -->
+  <rect x="0" y="148" width="520" height="62" fill="#1a1d2b"/>
+
+  <!-- FENLAND — Georgia serif, small-caps effect -->
+  <text
+    x="260" y="88"
+    font-family="Georgia, 'Palatino Linotype', Palatino, serif"
+    font-size="76"
+    font-variant="small-caps"
+    fill="#ebe7da"
+    text-anchor="middle"
+    letter-spacing="4"
+  >Fenland</text>
+
+  <!-- PROPERTY MAINTENANCE — thin tracked sans -->
+  <text
+    x="260" y="116"
+    font-family="'Century Gothic', Optima, 'Trebuchet MS', Arial, sans-serif"
+    font-size="14.5"
+    fill="#ebe7da"
+    text-anchor="middle"
+    letter-spacing="8"
+  >PROPERTY MAINTENANCE</text>
+
+  <!-- Fen landscape silhouette at the green/navy boundary -->
+  <path
+    d="M0,131
+       Q10,129 20,132 Q35,135 50,130 Q65,125 80,131
+       Q95,136 110,130 Q122,125 133,131
+       Q148,137 160,130 Q175,124 185,131
+       Q200,137 215,129 Q228,122 240,130
+       Q255,137 268,129 Q280,122 293,130
+       Q308,137 322,129 Q336,122 348,130
+       Q365,138 378,130 Q390,123 403,130
+       Q418,137 430,129
+       L435,128 L437,120 L439,114 L440,120 L441,128
+       L444,127 L446,118 L448,111 L450,118 L452,127
+       L455,126 L458,117 L460,109 L462,117 L464,126
+       L467,127 L469,120 L471,115 L472,120 L474,127
+       L478,129 Q488,132 500,129 Q512,126 520,130
+       L520,148 L0,148 Z"
+    fill="#ebe7da"
+    opacity="0.92"
+  />
+
+  <!-- Subtle water reflection line -->
+  <path
+    d="M10,138 Q80,136 150,139 Q220,142 290,138 Q360,134 430,138 Q475,141 510,138"
+    stroke="#ebe7da"
+    stroke-width="0.7"
+    fill="none"
+    opacity="0.4"
+  />
+</svg>
