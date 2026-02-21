@@ -46,7 +46,7 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
                 <button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className={`font-serif text-xl font-semibold tracking-tight transition-opacity hover:opacity-75 ${isScrolled ? 'text-neutral-900' : 'text-white'}`}
+                    className={`font-serif text-xl font-semibold tracking-tight transition-opacity hover:opacity-75 cursor-pointer ${isScrolled ? 'text-neutral-900' : 'text-white'}`}
                     aria-label="Back to top"
                 >
                     Fenland Property Maintenance.
