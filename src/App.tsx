@@ -54,7 +54,7 @@ const Navbar = () => {
 
                 <div className="hidden md:flex items-center space-x-7">
                     {['#services', '#service-area', '#gallery', '#reviews', '#contact'].map((href, i) => {
-                        const labels = ['Services', 'Areas', 'Gallery', 'Reviews', 'Contact'];
+                        const labels = ['Serviços', 'Área', 'Galeria', 'Avaliações', 'Contato'];
                         return (
                             <a key={href} href={href} className={`text-sm font-medium tracking-wide transition-colors ${isScrolled ? 'text-neutral-600 hover:text-neutral-900' : 'text-white/80 hover:text-white'}`}>
                                 {labels[i]}
@@ -66,14 +66,14 @@ const Navbar = () => {
                         <span>{PHONE_DISPLAY}</span>
                     </a>
                     <a href="#contact" className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${isScrolled ? 'bg-neutral-900 text-white hover:bg-neutral-700' : 'bg-white text-neutral-900 hover:bg-neutral-100'}`}>
-                        Free Quote
+                        Orçamento Grátis
                     </a>
                 </div>
 
                 <button
                     className={`md:hidden ${isScrolled ? 'text-neutral-900' : 'text-white'}`}
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                    aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
                     aria-expanded={mobileMenuOpen}
                 >
                     {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -88,14 +88,14 @@ const Navbar = () => {
                         exit={{ opacity: 0, y: -20 }}
                         className="absolute top-full left-0 w-full bg-white shadow-lg py-6 px-6 flex flex-col space-y-4 md:hidden"
                     >
-                        {[['#services', 'Services'], ['#service-area', 'Areas'], ['#gallery', 'Gallery'], ['#reviews', 'Reviews'], ['#contact', 'Contact']].map(([href, label]) => (
+                        {[['#services', 'Serviços'], ['#service-area', 'Área'], ['#gallery', 'Galeria'], ['#reviews', 'Avaliações'], ['#contact', 'Contato']].map(([href, label]) => (
                             <a key={href} href={href} className="text-neutral-700 font-medium py-1" onClick={() => setMobileMenuOpen(false)}>{label}</a>
                         ))}
                         <a href={PHONE_HREF} className="flex items-center space-x-2 text-neutral-900 font-semibold py-1">
                             <Phone size={16} /><span>{PHONE_DISPLAY}</span>
                         </a>
                         <a href="#contact" className="bg-neutral-900 text-white px-6 py-3 rounded-full font-medium text-center mt-2" onClick={() => setMobileMenuOpen(false)}>
-                            Get a Free Quote
+                            Solicitar Orçamento Grátis
                         </a>
                     </motion.div>
                 )}
@@ -110,7 +110,7 @@ const Hero = () => (
         <div className="absolute inset-0 z-0">
             <img
                 src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop"
-                alt="Freshly painted interior by Cambridge Property Care"
+                alt="Interior recém-pintado pela Fenland Property Maintenance"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
                 fetchPriority="high"
@@ -132,20 +132,20 @@ const Hero = () => (
                     <div className="flex gap-0.5 text-amber-400">
                         {[...Array(5)].map((_, i) => <Star key={i} size={13} fill="currentColor" />)}
                     </div>
-                    <span className="text-white text-sm font-medium">Rated 4.9 · 60+ Google Reviews</span>
+                    <span className="text-white text-sm font-medium">Avaliado em 4,9 · Mais de 60 avaliações no Google</span>
                 </div>
 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-[1.1] tracking-tight mb-5">
-                    Property Maintenance<br className="hidden md:block" />
-                    <span className="text-neutral-200"> Across Cambridgeshire</span>
+                    Manutenção de Imóveis<br className="hidden md:block" />
+                    <span className="text-neutral-200"> em Cambridgeshire</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto mb-10">
-                    Based in Ely, we carry out painting, carpentry, landscaping, handyman work and kitchen and bathroom fitting for homeowners and landlords across the fens.
+                    Baseados em Ely, realizamos pintura, carpintaria, paisagismo, serviços de marido de aluguel e instalação de cozinhas e banheiros para proprietários e locadores em toda a região dos Fens.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#contact" className="bg-white text-neutral-900 px-8 py-4 rounded-full font-semibold text-base hover:bg-neutral-100 transition-colors w-full sm:w-auto flex items-center justify-center gap-2 shadow-lg">
-                        <span>Get a Free Quote</span>
+                        <span>Solicitar Orçamento Grátis</span>
                         <ArrowRight size={17} />
                     </a>
                     <a href={PHONE_HREF} className="bg-neutral-900/30 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-neutral-900/50 transition-colors w-full sm:w-auto flex items-center justify-center gap-2">
@@ -154,7 +154,7 @@ const Hero = () => (
                     </a>
                 </div>
 
-                <p className="mt-6 text-white/60 text-sm">Mon to Sat, 7am to 6pm. Free quotes with no obligation. We usually reply within 2 hours.</p>
+                <p className="mt-6 text-white/60 text-sm">Seg. a Sáb., 7h às 18h. Orçamentos gratuitos e sem compromisso. Respondemos em até 2 horas.</p>
             </motion.div>
         </div>
     </section>
@@ -163,10 +163,10 @@ const Hero = () => (
 // ─── Credentials Bar ──────────────────────────────────────────────────────────
 const Credentials = () => {
     const items = [
-        { icon: <ShieldCheck size={22} className="text-neutral-700" />, title: 'Fully Insured', subtitle: 'Public Liability Cover' },
-        { icon: <Clock size={22} className="text-neutral-700" />, title: '10+ Years', subtitle: 'Serving Cambridgeshire' },
-        { icon: <Award size={22} className="text-neutral-700" />, title: 'Reliable Tradesman', subtitle: 'Trusted Locally Since 2014' },
-        { icon: <Star size={22} className="text-neutral-700" />, title: '4.9 Stars', subtitle: '60+ Google Reviews' },
+        { icon: <ShieldCheck size={22} className="text-neutral-700" />, title: 'Totalmente Segurado', subtitle: 'Cobertura de Responsabilidade Civil' },
+        { icon: <Clock size={22} className="text-neutral-700" />, title: 'Mais de 10 Anos', subtitle: 'Atendendo Cambridgeshire' },
+        { icon: <Award size={22} className="text-neutral-700" />, title: 'Profissional de Confiança', subtitle: 'Reconhecido Localmente Desde 2014' },
+        { icon: <Star size={22} className="text-neutral-700" />, title: '4,9 Estrelas', subtitle: 'Mais de 60 Avaliações no Google' },
     ];
 
     return (
@@ -203,20 +203,20 @@ const HowItWorks = () => {
         {
             icon: <MessageSquare size={26} className="text-neutral-700" />,
             step: '01',
-            title: 'Get in Touch',
-            desc: 'Call us or fill in our quick form. We usually respond within 2 hours and can visit for a quote the same week.',
+            title: 'Entre em Contato',
+            desc: 'Ligue ou preencha nosso formulário rápido. Geralmente respondemos em 2 horas e podemos visitar para orçamento na mesma semana.',
         },
         {
             icon: <CalendarCheck size={26} className="text-neutral-700" />,
             step: '02',
-            title: 'Free Quote & Schedule',
-            desc: 'We visit, assess the work and give you a clear written quote. No hidden costs. You choose a start date that suits you.',
+            title: 'Orçamento Grátis & Agendamento',
+            desc: 'Visitamos, avaliamos o trabalho e entregamos um orçamento escrito e claro. Sem custos ocultos. Você escolhe a data de início.',
         },
         {
             icon: <Sparkles size={26} className="text-neutral-700" />,
             step: '03',
-            title: 'Pristine Results',
-            desc: 'We work cleanly, protect your furniture and leave the place spotless. Most of our clients come back to us for their next job.',
+            title: 'Resultado Impecável',
+            desc: 'Trabalhamos limpamente, protegemos seus móveis e deixamos tudo em ordem. A maioria dos nossos clientes volta para o próximo serviço.',
         },
     ];
 
@@ -224,8 +224,8 @@ const HowItWorks = () => {
         <section className="py-20 bg-[#faf9f6]">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <div className="text-center mb-14">
-                    <h2 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-4">Simple From Start to Finish</h2>
-                    <p className="text-neutral-500 font-light max-w-xl mx-auto">We keep things straightforward. No chasing, no surprises, just good work done properly.</p>
+                    <h2 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-4">Simples do Início ao Fim</h2>
+                    <p className="text-neutral-500 font-light max-w-xl mx-auto">Sem complicações. Sem surpresas. Só um bom trabalho feito com cuidado.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
                     {/* Connector line (desktop) */}
@@ -251,7 +251,7 @@ const HowItWorks = () => {
                 <div className="text-center mt-12">
                     <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-neutral-900 text-white px-7 py-3.5 rounded-full font-medium hover:bg-neutral-700 transition-colors text-sm">
                         <Phone size={16} />
-                        Call Now: {PHONE_DISPLAY}
+                        Ligar Agora: {PHONE_DISPLAY}
                     </a>
                 </div>
             </div>
@@ -267,17 +267,17 @@ const LandlordCTA = () => (
                 <div>
                     <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
                         <Building2 size={14} className="text-white/70" />
-                        <span className="text-white/80 text-xs font-medium tracking-wider uppercase">For Landlords &amp; Letting Agents</span>
+                        <span className="text-white/80 text-xs font-medium tracking-wider uppercase">Para Proprietários &amp; Imobiliárias</span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-serif text-white leading-snug mb-6">
-                        Fast Turnarounds.<br />Minimal Disruption.<br />Tenancy-Ready Results.
+                        Entrega Rápida.<br />Mínima Perturbação.<br />Resultado Pronto para Locação.
                     </h2>
                     <p className="text-neutral-400 font-light leading-relaxed mb-8">
-                        We work with landlords and letting agents across Ely and Cambridgeshire to get properties back on the market quickly. Whether it is an end-of-tenancy clean-up, an HMO repaint or ongoing maintenance across a portfolio, we are reliable, efficient and we will not let you down.
+                        Trabalhamos com proprietários e imobiliárias em Ely e Cambridgeshire para colocar imóveis de volta no mercado rapidamente. Seja uma reforma ao fim do contrato, uma repintura de HMO ou manutenção contínua de portfólio, somos confiáveis, eficientes e não vamos te decepcionar.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                         <a href="#contact" className="bg-white text-neutral-900 px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-neutral-100 transition-colors text-center">
-                            Property Owner Enquiry
+                            Consulta para Proprietário
                         </a>
                         <a href={PHONE_HREF} className="border border-white/25 text-white px-7 py-3.5 rounded-full font-medium text-sm hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
                             <Phone size={15} /> {PHONE_DISPLAY}
@@ -286,10 +286,10 @@ const LandlordCTA = () => (
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                     {[
-                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'End-of-Tenancy Work', desc: 'We know what letting inspections look for. Clean, crisp finishes that satisfy agents and tenants alike.' },
-                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'Portfolio Maintenance', desc: 'Regular maintenance across multiple properties. One point of contact and a consistent standard every time.' },
-                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'Flexible Scheduling', desc: 'We work around void periods, tenant move-outs and inspection timelines. Same-week availability is often possible.' },
-                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'Clear Invoicing', desc: 'Detailed invoices for every job, easy to pass on to landlords or use for tenant deposit deductions.' },
+                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'Trabalho no Fim do Contrato', desc: 'Sabemos o que as vistorias de locação exigem. Acabamentos limpos e precisos que satisfazem agentes e inquilinos.' },
+                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'Manutenção de Portfólio', desc: 'Manutenção regular em múltiplos imóveis. Um único ponto de contato e um padrão consistente sempre.' },
+                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'Agendamento Flexível', desc: 'Trabalhamos em torno dos períodos vagos, saída de inquilinos e prazos de vistoria. Disponibilidade na mesma semana é frequentemente possível.' },
+                        { icon: <CheckCircle2 size={20} className="text-emerald-400 shrink-0 mt-0.5" />, title: 'Faturamento Claro', desc: 'Faturas detalhadas para cada serviço, fáceis de repassar a proprietários ou usar para deduções de caução.' },
                     ].map((item, idx) => (
                         <motion.div
                             key={idx}
@@ -315,10 +315,10 @@ const LandlordCTA = () => (
 // ─── Gallery ──────────────────────────────────────────────────────────────────
 const Gallery = () => {
     const images = [
-        { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop', alt: 'Carpentry and fitted shelving — Ely', label: 'Fitted Carpentry, Ely' },
-        { src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop', alt: 'Garden maintenance and landscaping — Soham', label: 'Garden Maintenance, Soham' },
-        { src: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop', alt: 'Interior painting and decorating by Fenland Property Maintenance', label: 'Interior Painting, March' },
-        { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2070&auto=format&fit=crop', alt: 'Kitchen fitting — Chatteris', label: 'Kitchen Fitting, Chatteris' },
+        { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop', alt: 'Carpintaria e prateleiras sob medida — Ely', label: 'Carpintaria, Ely' },
+        { src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop', alt: 'Manutenção de jardim e paisagismo — Soham', label: 'Manutenção de Jardim, Soham' },
+        { src: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop', alt: 'Pintura de interiores pela Fenland Property Maintenance', label: 'Pintura de Interior, March' },
+        { src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2070&auto=format&fit=crop', alt: 'Instalação de cozinha — Chatteris', label: 'Instalação de Cozinha, Chatteris' },
     ];
 
     return (
@@ -326,13 +326,13 @@ const Gallery = () => {
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
                     <div className="max-w-2xl">
-                        <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-4">Our Work Across Cambridgeshire</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-4">Nossos Trabalhos por Cambridgeshire</h2>
                         <p className="text-lg text-neutral-500 font-light">
-                            From Ely townhouses to Cambridge period homes, we hold the same high standard on every job.
+                            De casas em Ely a imóveis históricos em Cambridge, mantemos o mesmo alto padrão em cada serviço.
                         </p>
                     </div>
                     <a href="#contact" className="mt-6 md:mt-0 flex items-center gap-2 text-neutral-900 font-medium hover:text-neutral-600 transition-colors text-sm">
-                        <span>Request a similar finish</span>
+                        <span>Solicite um acabamento similar</span>
                         <ChevronRight size={15} />
                     </a>
                 </div>
@@ -372,32 +372,32 @@ const Reviews = () => {
         {
             name: 'Eleanor Hughes',
             location: 'Grantchester, Cambridge',
-            text: 'The team transformed our Victorian townhouse with incredible attention to detail. Immaculate, quiet, and the finish on the woodwork is simply flawless. Worth every penny.',
+            text: 'A equipe transformou nossa casa com uma atenção incrível aos detalhes. Imaculado, silencioso, e o acabamento na madeireira é simplesmente impecável. Valeu cada centavo.',
         },
         {
             name: 'David & Sarah Chen',
             location: 'Trumpington, Cambridge',
-            text: 'Finding reliable tradespeople in Cambridgeshire is hard — Fenland Property Maintenance are in a league of their own. They helped us with our kitchen fitting and the result was brilliant.',
+            text: 'Encontrar profissionais de confiança em Cambridgeshire é difícil — a Fenland Property Maintenance está em uma categoria à parte. Nos ajudaram com a instalação da cozinha e o resultado foi brilhante.',
         },
         {
             name: 'Marcus Thorne',
             location: 'Soham',
-            text: 'Professional from the first quote to the final walkthrough. They repaired extensive water damage before painting and you would never know it was there. Highly recommended.',
+            text: 'Profissional do primeiro orçamento até a vistoria final. Repararam danos extensos por umidade antes de pintar e você jamais diria que o problema existiu. Super recomendado.',
         },
         {
             name: 'Janet Proctor',
             location: 'Ely',
-            text: 'I use them for all my rental properties. Fast, tidy, and consistently brilliant. My tenants comment on how well the properties are presented. The best trade I have ever found.',
+            text: 'Uso para todos os meus imóveis alugados. Rápido, organizado e consistentemente excelente. Meus inquilinos comentam sempre sobre a ótima apresentação dos imóveis. O melhor profissional que já contratei.',
         },
         {
             name: 'Tom Whitfield',
             location: 'Newmarket',
-            text: 'Booked them for a full exterior repaint and they were outstanding. They flagged some rot issues I hadn\'t noticed, repaired them, and the house looks like new. Will use again.',
+            text: 'Contratei para uma repintura completa do exterior e foi excepcional. Identificaram problemas de apodrecimento que eu não havia notado, repararam, e a casa parece nova. Usarei novamente.',
         },
         {
             name: 'Sarah Okafor',
             location: 'Huntingdon',
-            text: 'Gave us a clear quote, stuck to it, and completed ahead of schedule. Covered everything carefully and left zero mess. Exactly what you want from a tradesperson.',
+            text: 'Deram um orçamento claro, cumpriram o valor e terminaram antes do prazo. Cobriram tudo com cuidado e não deixaram nenhuma sujeira. Exatamente o que se espera de um profissional.',
         },
     ];
 
@@ -409,11 +409,11 @@ const Reviews = () => {
                         <div className="flex gap-0.5 text-amber-400">
                             {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
                         </div>
-                        <span className="text-neutral-600 font-medium text-sm">4.9 average · 60+ Google Reviews</span>
+                        <span className="text-neutral-600 font-medium text-sm">Média 4,9 · Mais de 60 avaliações no Google</span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-5">What Our Customers Say</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-5">O Que Nossos Clientes Dizem</h2>
                     <p className="text-neutral-500 font-light">
-                        Trusted by homeowners and landlords across Ely, Cambridge, and Cambridgeshire.
+                        Confiados por proprietários e locadores em Ely, Cambridge e Cambridgeshire.
                     </p>
                 </div>
 
@@ -449,7 +449,7 @@ const Reviews = () => {
                 </div>
 
                 <div className="text-center mt-10">
-                    <p className="text-neutral-400 text-sm">Reviews sourced from Google Business Profile</p>
+                    <p className="text-neutral-400 text-sm">Avaliações extraídas do Google Meu Negócio</p>
                 </div>
             </div>
         </section>
@@ -460,33 +460,33 @@ const Reviews = () => {
 const Services = () => {
     const services = [
         {
-            title: 'Painting & Decorating',
-            description: 'Interior and exterior painting for homes and rental properties. Walls, ceilings, woodwork and feature walls. Quality materials and a finish that lasts.',
+            title: 'Pintura & Decoração',
+            description: 'Pintura de interiores e exteriores para residências e imóveis alugados. Paredes, tetos, madeireira e paredes de destaque. Materiais de qualidade e acabamento duradouro.',
             icon: <Paintbrush size={22} />,
         },
         {
-            title: 'End-of-Tenancy Refresh',
-            description: 'Get your property back on the market quickly. We repaint walls, touch up scuffs and bring properties up to a lettable standard. We often finish within 2 to 3 days.',
+            title: 'Reforma no Fim de Contrato',
+            description: 'Coloque seu imóvel de volta no mercado rapidamente. Repintamos paredes, corrigimos arranhões e deixamos o imóvel em condições de locação. Frequentemente concluímos em 2 a 3 dias.',
             icon: <Building2 size={22} />,
         },
         {
-            title: 'Property Maintenance',
-            description: 'From leaking taps to cracked plaster, we deal with the jobs that build up. Ideal for landlords with multiple properties or homeowners who want one trusted tradesman.',
+            title: 'Manutenção de Imóveis',
+            description: 'De torneiras com vazamento a reboco rachado, cuidamos dos serviços que se acumulam. Ideal para locadores com múltiplos imóveis ou proprietários que querem um único profissional de confiança.',
             icon: <Wrench size={22} />,
         },
         {
-            title: 'Carpentry & Joinery',
-            description: 'Door hanging, shelving, skirting boards, dado rails and flat-pack assembly. All finished to a proper standard, not just put together and left.',
+            title: 'Carpintaria & Marcenaria',
+            description: 'Instalação de portas, prateleiras, rodapés, frisos e montagem de móveis. Tudo com acabamento profissional, não apenas montado e deixado.',
             icon: <Hammer size={22} />,
         },
         {
-            title: 'Minor Plumbing & Electrical',
-            description: 'Tap replacements, socket changes and light fittings. Safe, compliant work carried out by experienced tradespeople.',
+            title: 'Pequenos Reparos Hidráulicos & Elétricos',
+            description: 'Troca de torneiras, tomadas e luminárias. Trabalho seguro e em conformidade realizado por profissionais experientes.',
             icon: <Zap size={22} />,
         },
         {
-            title: 'Outdoor & Garden Care',
-            description: 'Fence repairs, decking treatment, exterior masonry painting, gutter clearing and seasonal upkeep. Keeping your property looking its best from the outside.',
+            title: 'Jardim & Área Externa',
+            description: 'Reparos em cercas, tratamento de decks, pintura de alvenaria externa, limpeza de calhas e manutenção sazonal. Mantendo seu imóvel sempre com a melhor aparência por fora.',
             icon: <Leaf size={22} />,
         },
     ];
@@ -495,9 +495,9 @@ const Services = () => {
         <section id="services" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-5">What We Do</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-5">O Que Fazemos</h2>
                     <p className="text-lg text-neutral-500 font-light">
-                        Full property care from a quick repaint to a complete interior refresh. One reliable team, one point of contact.
+                        Cuidado completo do imóvel, de uma repintura rápida a uma reforma completa do interior. Uma equipe confiável, um único ponto de contato.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -520,7 +520,7 @@ const Services = () => {
                 </div>
                 <div className="text-center mt-12">
                     <a href="#contact" className="inline-flex items-center gap-2 border border-neutral-200 text-neutral-800 px-7 py-3.5 rounded-full font-medium text-sm hover:bg-neutral-50 transition-colors">
-                        Enquire About Any Service <ArrowRight size={16} />
+                        Consultar Sobre Qualquer Serviço <ArrowRight size={16} />
                     </a>
                 </div>
             </div>
@@ -686,23 +686,23 @@ const ServiceArea = () => {
                     <div>
                         <div className="inline-flex items-center gap-2 text-neutral-500 text-sm font-medium mb-5">
                             <MapPin size={15} className="text-neutral-400" />
-                            <span className="uppercase tracking-wider text-xs">Service Area</span>
+                            <span className="uppercase tracking-wider text-xs">Área de Atendimento</span>
                         </div>
                         <h2 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-5">
-                            Covering Ely, Cambridge &amp; Surrounding Cambridgeshire
+                            Atendemos Ely, Cambridge &amp; Região de Cambridgeshire
                         </h2>
                         <p className="text-neutral-500 font-light leading-relaxed mb-8">
-                            Based in Ely, we carry out house maintenance, handyman work, painting, carpentry, kitchens and bathrooms, and landscaping across Cambridgeshire. Whether you are a homeowner in Newmarket, a landlord in Soham or a letting agent in Huntingdon, we can help.
+                            Baseados em Ely, realizamos manutenção de imóveis, serviços de marido de aluguel, pintura, carpintaria, cozinhas e banheiros, e paisagismo em toda Cambridgeshire. Seja proprietário em Newmarket, locador em Soham ou imobiliária em Huntingdon, podemos ajudar.
                         </p>
                         <p className="text-neutral-500 font-light leading-relaxed mb-8">
-                            Not sure if we cover your area? Give us a call. We are flexible and regularly take on work all across the fens.
+                            Não tem certeza se atendemos a sua área? Ligue para nós. Somos flexíveis e frequentemente atendemos por toda a região dos Fens.
                         </p>
                         <a href={PHONE_HREF} className="inline-flex items-center gap-2 bg-neutral-900 text-white px-7 py-3.5 rounded-full font-medium text-sm hover:bg-neutral-700 transition-colors">
                             <Phone size={15} /> {PHONE_DISPLAY}
                         </a>
                     </div>
                     <div>
-                        <p className="text-xs uppercase tracking-widest text-neutral-400 font-medium mb-5">Areas We Cover</p>
+                        <p className="text-xs uppercase tracking-widest text-neutral-400 font-medium mb-5">Áreas que Atendemos</p>
                         <CambridgeshireMap />
                     </div>
                 </div>
@@ -725,9 +725,9 @@ const Contact = () => {
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-5">Get Your Free Quote</h2>
+                        <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-5">Solicite Seu Orçamento Grátis</h2>
                         <p className="text-lg text-neutral-500 font-light mb-8">
-                            Fill in the form and we will get back to you within 2 hours. Prefer to talk? Give us a call. Phone enquiries are always welcome and there is no hard sell.
+                            Preencha o formulário e retornaremos em até 2 horas. Prefere falar? Ligue para nós. Sempre atendemos por telefone e não fazemos pressão.
                         </p>
                         <div className="space-y-5 mb-10">
                             <div className="flex items-center gap-4">
@@ -735,7 +735,7 @@ const Contact = () => {
                                     <Phone size={18} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-neutral-400 uppercase tracking-wider font-medium">Call or WhatsApp</p>
+                                    <p className="text-xs text-neutral-400 uppercase tracking-wider font-medium">Ligue ou WhatsApp</p>
                                     <a href={PHONE_HREF} className="text-lg font-semibold text-neutral-900 hover:text-neutral-600 transition-colors">{PHONE_DISPLAY}</a>
                                 </div>
                             </div>
@@ -744,7 +744,7 @@ const Contact = () => {
                                     <Mail size={18} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-neutral-400 uppercase tracking-wider font-medium">Email Us</p>
+                                    <p className="text-xs text-neutral-400 uppercase tracking-wider font-medium">E-mail</p>
                                     <a href={`mailto:${EMAIL}`} className="text-lg font-semibold text-neutral-900 hover:text-neutral-600 transition-colors">{EMAIL}</a>
                                 </div>
                             </div>
@@ -753,14 +753,14 @@ const Contact = () => {
                                     <Clock size={18} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-neutral-400 uppercase tracking-wider font-medium">Working Hours</p>
-                                    <p className="text-base font-medium text-neutral-900">Mon–Sat, 7am–6pm</p>
+                                    <p className="text-xs text-neutral-400 uppercase tracking-wider font-medium">Horário de Atendimento</p>
+                                    <p className="text-base font-medium text-neutral-900">Seg.–Sáb., 7h–18h</p>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-[#faf9f6] rounded-2xl p-6 border border-neutral-100">
-                            <p className="text-sm font-semibold text-neutral-900 mb-3">Why clients choose us</p>
-                            {['Free written quotes, no obligation', 'Fixed prices with no hidden extras', 'Tidy, professional and respectful of your home', 'Fully insured to £5M public liability'].map((item) => (
+                            <p className="text-sm font-semibold text-neutral-900 mb-3">Por que nos escolhem</p>
+                            {['Orçamentos escritos gratuitos, sem compromisso', 'Preços fixos sem custos ocultos', 'Organizados, profissionais e respeitosos com o seu lar', 'Totalmente segurados com cobertura de até £5M'].map((item) => (
                                 <div key={item} className="flex items-center gap-2.5 mb-2.5 last:mb-0">
                                     <CheckCircle2 size={15} className="text-emerald-500 shrink-0" />
                                     <span className="text-sm text-neutral-600">{item}</span>
@@ -775,48 +775,48 @@ const Contact = () => {
                                 <div className="w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center mb-5">
                                     <CheckCircle2 size={32} className="text-emerald-500" />
                                 </div>
-                                <h3 className="text-2xl font-serif text-neutral-900 mb-3">Message Received!</h3>
+                                <h3 className="text-2xl font-serif text-neutral-900 mb-3">Mensagem Recebida!</h3>
                                 <p className="text-neutral-500 font-light max-w-xs">
-                                    Thank you. We will be in touch within 2 hours. If it is urgent, please call us on <a href={PHONE_HREF} className="text-neutral-900 font-medium underline">{PHONE_DISPLAY}</a>.
+                                    Obrigado. Entraremos em contato em até 2 horas. Se for urgente, ligue para nós: <a href={PHONE_HREF} className="text-neutral-900 font-medium underline">{PHONE_DISPLAY}</a>.
                                 </p>
                             </div>
                         ) : (
                             <form className="space-y-5" onSubmit={handleSubmit} noValidate>
-                                <h3 className="font-serif text-xl text-neutral-900 mb-6">Tell Us About Your Job</h3>
+                                <h3 className="font-serif text-xl text-neutral-900 mb-6">Conte-nos Sobre o Seu Projeto</h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                     <div className="space-y-1.5">
-                                        <label htmlFor="contact-name" className="text-sm font-medium text-neutral-700">Name</label>
-                                        <input id="contact-name" type="text" required className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all" placeholder="Your name" />
+                                        <label htmlFor="contact-name" className="text-sm font-medium text-neutral-700">Nome</label>
+                                        <input id="contact-name" type="text" required className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all" placeholder="Seu nome" />
                                     </div>
                                     <div className="space-y-1.5">
-                                        <label htmlFor="contact-phone" className="text-sm font-medium text-neutral-700">Phone</label>
-                                        <input id="contact-phone" type="tel" className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all" placeholder="Best number to call" />
+                                        <label htmlFor="contact-phone" className="text-sm font-medium text-neutral-700">Telefone</label>
+                                        <input id="contact-phone" type="tel" className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all" placeholder="Melhor número para contato" />
                                     </div>
                                 </div>
                                 <div className="space-y-1.5">
-                                    <label htmlFor="contact-email" className="text-sm font-medium text-neutral-700">Email</label>
-                                    <input id="contact-email" type="email" required className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all" placeholder="Your email address" />
+                                    <label htmlFor="contact-email" className="text-sm font-medium text-neutral-700">E-mail</label>
+                                    <input id="contact-email" type="email" required className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all" placeholder="Seu endereço de e-mail" />
                                 </div>
                                 <div className="space-y-1.5">
-                                    <label htmlFor="contact-service" className="text-sm font-medium text-neutral-700">Service Needed</label>
+                                    <label htmlFor="contact-service" className="text-sm font-medium text-neutral-700">Serviço Necessário</label>
                                     <select id="contact-service" className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all">
-                                        <option>Painting & Decorating</option>
-                                        <option>End-of-Tenancy Refresh</option>
-                                        <option>Property Maintenance</option>
-                                        <option>Carpentry & Joinery</option>
-                                        <option>Minor Plumbing & Electrical</option>
-                                        <option>Outdoor & Garden Care</option>
-                                        <option>Not Sure — Need Advice</option>
+                                        <option>Pintura & Decoração</option>
+                                        <option>Reforma no Fim de Contrato</option>
+                                        <option>Manutenção de Imóveis</option>
+                                        <option>Carpintaria & Marcenaria</option>
+                                        <option>Pequenos Reparos Hidráulicos & Elétricos</option>
+                                        <option>Jardim & Área Externa</option>
+                                        <option>Não Tenho Certeza — Preciso de Orientação</option>
                                     </select>
                                 </div>
                                 <div className="space-y-1.5">
-                                    <label htmlFor="contact-message" className="text-sm font-medium text-neutral-700">Tell Us About Your Project</label>
-                                    <textarea id="contact-message" rows={4} className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all resize-none" placeholder="E.g. 3-bed semi in Ely, need full interior repaint before new tenants move in..." />
+                                    <label htmlFor="contact-message" className="text-sm font-medium text-neutral-700">Conte-nos Sobre o Seu Projeto</label>
+                                    <textarea id="contact-message" rows={4} className="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-900/10 bg-white text-sm transition-all resize-none" placeholder="Ex.: Casa de 3 quartos em Ely, preciso de repintura completa antes dos novos inquilinos entrarem..." />
                                 </div>
                                 <button type="submit" className="w-full bg-neutral-900 text-white py-4 rounded-xl font-semibold text-sm hover:bg-neutral-700 transition-colors shadow-sm">
-                                    Request Free Quote
+                                    Solicitar Orçamento Grátis
                                 </button>
-                                <p className="text-xs text-neutral-400 text-center">We usually reply within 2 hours. No obligation and no hard sell.</p>
+                                <p className="text-xs text-neutral-400 text-center">Geralmente respondemos em até 2 horas. Sem compromisso e sem pressão.</p>
                             </form>
                         )}
                     </div>
@@ -834,7 +834,7 @@ const Footer = () => (
                 <div>
                     <div className="font-serif text-lg font-semibold text-white mb-1">Fenland Property Maintenance.</div>
                     <p className="text-neutral-400 text-sm font-light">
-                        House maintenance, handyman work, painting, carpentry, kitchens, bathrooms and landscaping across Cambridgeshire.
+                        Manutenção de imóveis, marido de aluguel, pintura, carpintaria, cozinhas, banheiros e paisagismo em Cambridgeshire.
                     </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -842,16 +842,16 @@ const Footer = () => (
                         <Phone size={15} /> {PHONE_DISPLAY}
                     </a>
                     <a href="#contact" className="bg-white text-neutral-900 px-5 py-2 rounded-full text-sm font-semibold hover:bg-neutral-100 transition-colors text-center">
-                        Get a Free Quote
+                        Solicitar Orçamento Grátis
                     </a>
                 </div>
             </div>
 
             <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-neutral-800 text-xs text-neutral-500 font-light gap-3">
-                <p>© {new Date().getFullYear()} Fenland Property Maintenance. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Fenland Property Maintenance. Todos os direitos reservados.</p>
                 <div className="flex gap-6">
-                    <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+                    <a href="#" className="hover:text-white transition-colors">Termos de Serviço</a>
                 </div>
             </div>
         </div>
