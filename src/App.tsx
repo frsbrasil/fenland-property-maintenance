@@ -44,9 +44,13 @@ const Navbar = () => {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-                <div className={`font-serif text-xl font-semibold tracking-tight ${isScrolled ? 'text-neutral-900' : 'text-white'}`}>
+                <button
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className={`font-serif text-xl font-semibold tracking-tight transition-opacity hover:opacity-75 ${isScrolled ? 'text-neutral-900' : 'text-white'}`}
+                    aria-label="Back to top"
+                >
                     Fenland Property Maintenance.
-                </div>
+                </button>
 
                 <div className="hidden md:flex items-center space-x-7">
                     {['#services', '#service-area', '#gallery', '#reviews', '#contact'].map((href, i) => {
