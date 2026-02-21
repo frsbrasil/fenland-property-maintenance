@@ -140,7 +140,7 @@ const Hero = () => (
                     <span className="text-neutral-200"> em Cambridgeshire</span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto mb-10">
-                    Baseados em Ely, realizamos pintura, carpintaria, paisagismo, serviços de marido de aluguel e instalação de cozinhas e banheiros para proprietários e locadores em toda a região dos Fens.
+                    Com base em Ely, oferecemos serviços completos de manutenção de imóveis, incluindo pintura interna e externa, carpintaria, paisagismo, pequenos reparos e instalação de cozinhas e banheiros.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -692,7 +692,7 @@ const ServiceArea = () => {
                             Atendemos Ely, Cambridge &amp; Região de Cambridgeshire
                         </h2>
                         <p className="text-neutral-500 font-light leading-relaxed mb-8">
-                            Baseados em Ely, realizamos manutenção de imóveis, serviços de marido de aluguel, pintura, carpintaria, cozinhas e banheiros, e paisagismo em toda Cambridgeshire. Seja proprietário em Newmarket, locador em Soham ou imobiliária em Huntingdon, podemos ajudar.
+                            Com base em Ely, oferecemos serviços completos de manutenção de imóveis, incluindo pintura interna e externa, carpintaria, paisagismo, pequenos reparos e instalação de cozinhas e banheiros.
                         </p>
                         <p className="text-neutral-500 font-light leading-relaxed mb-8">
                             Não tem certeza se atendemos a sua área? Ligue para nós. Somos flexíveis e frequentemente atendemos por toda a região dos Fens.
