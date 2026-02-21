@@ -179,13 +179,9 @@ const Navbar = () => {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-                {/* Logo */}
-                <a href="#" className="flex items-center">
-                    <img
-                        src="/logo.svg"
-                        alt="Fenland Property Maintenance logo"
-                        className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'}`}
-                    />
+                {/* Brand name */}
+                <a href="#" className={`font-serif font-semibold tracking-tight transition-colors ${isScrolled ? 'text-neutral-900 text-lg' : 'text-white text-xl'}`}>
+                    {BUSINESS_NAME}
                 </a>
 
                 {/* Desktop nav */}
@@ -839,7 +835,7 @@ const Footer = () => (
         <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
                 <div className="flex flex-col gap-2">
-                    <img src="/logo.svg" alt="Fenland Property Maintenance" className="h-12 w-auto" />
+                    <p className="font-serif font-semibold text-white text-lg tracking-tight">{BUSINESS_NAME}</p>
                     <p className="text-neutral-400 text-sm font-light">
                         Property maintenance across {REGION}.
                     </p>
